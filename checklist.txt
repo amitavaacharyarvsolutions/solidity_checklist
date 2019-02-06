@@ -1,0 +1,8 @@
+1 - PACK SIMILAR DATA TYPES TOGETHER
+2 - USE UINT256 IF USING SEPERATELY, NOT IN PACK
+3 - Elements in Memory and Call Data cannot be packed. 
+4 - it’s cheaper to use arrays if you are using smaller elements like uint8 which can be packed together
+5 - There is no gas saving in solidity by using smaller variables in function calls and memory.
+6 - make less external calls
+7 - If your function is only called externally, then you should explicitly mark it as external. External function’s parameters are not copied into memory but are read from calldata directly.
+8 - Use && , || precisely such that no need to evaluate second statement.
